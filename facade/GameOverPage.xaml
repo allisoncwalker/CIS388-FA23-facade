@@ -12,6 +12,7 @@
             HorizontalOptions="Center"
             Padding="20, 100, 29, 130"
             FontFamily="Roboto-Regular"
-            TextColor="Thistle"/>
+            Background="Red"
+            TextColor="white"/>
     </VerticalStackLayout>
 </ContentPage>

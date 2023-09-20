@@ -1,32 +1,51 @@
 ﻿using System;
-//using CommunityToolkit.Mvvm.ComponetModel;
+using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace facade
 {
-    public class MainPageViewModel
-		//ObservableProperty
+    public partial class MainPageViewModel : ObservableObject
     {
-		//[ObservableProperty] 
-		//private string secretColor; 
+        [ObservableProperty]
+        private string secretColor;
 
-        //[ObservableProperty] 
-        //private string currentGuess;
+        [ObservableProperty]
+        private string currentGuess;
+
+        public ObservableCollection<string> Guesses { get; set; }
+
+        //public string SecretColor { get; set; }
+
+        public MainPageViewModel()
+        {
+            secretColor = "FACADE";
+            currentGuess = "";
+        }
 
 
+        [RelayCommand]
+        void AddLetter(string letter)
+        {
+            if (CurrentGuess.Length < 6)
+            {
+                CurrentGuess += letter;
+            }
+        }
 
-		//public string SectretColor { get; set; }
+        void Guess()
+        {
+            // if correct, then go to game over (DidWin=true)
 
-		public MainPageViewModel()
-		{
-			//secretColor = "FACADE";
-			//currentGuess = "Facade";
-		}
+            // else if this is the 6th guess (and it's wrong)
+            // then go to game over (DidWin=false)
 
-		//[RelayCommand]
-		void AddLetter(string letter)
-		{
-			//currentGuess += letter;
-		}
-	}
+
+            // Add this guess to the Guesses
+            Guesses.Add(CurrentGuess);
+
+        }
+
+
+    }
 }
-
