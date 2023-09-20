@@ -3,9 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="facade.MainPage"
              Title="#facade"
+             BackgroundColor="#facade"
+             xmlns:local="clr-namespace:facade"
              >
 
-    <ScrollView>
+    <ScrollView BackgroundColor="Transparent" >
+
         <Grid Padding="0" RowSpacing="16">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -15,14 +18,14 @@
             </Grid.RowDefinitions>
 
 
-            <!--<RoundRectangle Grid.Row="0" Fill="#facade" CornerRadius="48" MaximumHeightRequest="150"/>-->
+            <RoundRectangle Grid.Row="0" Fill="#facade" CornerRadius="48" MaximumHeightRequest="150"/>
             <StackLayout HorizontalOptions="Fill" BackgroundColor="#facade" Padding="8" Grid.Row="0" Orientation="Horizontal"  >
 
                 <Label Text="#" FontSize="60" VerticalOptions="Center" />
-                <Label Text="FACADE"
+                <!--<Label Text="{Binding CurrentGuess}"
                        FontSize="60"
                        VerticalOptions="Center"
-                       />
+                       />-->
 
             </StackLayout>
 
@@ -38,6 +41,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
+                <Entry
+                  MaxLength="20"
+                  Style="{StaticResource CommonEntryStyle}"
+                  Text="This is the text." />
                 <Button Grid.Row="0"
                     Grid.Column="0"
                     Text="#beaded"
@@ -54,31 +61,6 @@
                     Grid.Column="2"
                     Text="#beefed"
                     BackgroundColor="#beefed"
-                    FontSize="16"
-                    IsEnabled="false "/>
-
-                <Button Grid.Row="1"
-                    Grid.Column="0"
-                    Text=""
-                    BackgroundColor="Transparent"
-                    BorderColor="#111"
-                    BorderWidth="1"
-                    FontSize="16"
-                    IsEnabled="false "/>
-                <Button Grid.Row="1"
-                    Grid.Column="1"
-                    Text=""
-                    BackgroundColor="Transparent"
-                    BorderColor="#111"
-                    BorderWidth="1"
-                    FontSize="16"
-                    IsEnabled="false "/>
-                <Button Grid.Row="1"
-                    Grid.Column="2"
-                    Text=""
-                    BackgroundColor="Transparent"
-                    BorderColor="#111"
-                    BorderWidth="1"
                     FontSize="16"
                     IsEnabled="false "/>
 
@@ -103,7 +85,7 @@
                     Text="A"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#111"
                     TextColor="White"
                     FontSize="48"
                 />
@@ -112,7 +94,7 @@
                     Text="B"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#111"
                     TextColor="White"
 
                     FontSize="48"
@@ -122,7 +104,7 @@
                     Text="C"
                    WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#111"
                     TextColor="White"
 
                     FontSize="48"
@@ -132,7 +114,7 @@
                     Text="D"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#111"
                     TextColor="White"
 
                     FontSize="48"
@@ -142,7 +124,7 @@
                     Text="E"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#111"
                     TextColor="White"
 
                     FontSize="48"
@@ -152,7 +134,7 @@
                     Text="F"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#111"
                     TextColor="White"
 
                     FontSize="48"
@@ -162,8 +144,8 @@
                     Text="↑"
                     WidthRequest="60"
                     HeightRequest="60"
-                        CornerRadius="30"
-                    BackgroundColor="#666"
+                        CornerRadius="5"
+                    BackgroundColor="#111"
                     TextColor="White"
                     Clicked="Button_Clicked"
                     FontSize="32"

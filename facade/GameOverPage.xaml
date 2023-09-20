@@ -7,8 +7,10 @@
         <Label
             x:Name="ResultLabel"
             Text="{Binding Result}"
-            FontSize="Title"
+            FontSize="Header"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            Padding="20, 100, 29, 130"
+            FontFamily="Roboto-Regular"/>
     </VerticalStackLayout>
 </ContentPage>

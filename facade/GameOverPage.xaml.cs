@@ -12,11 +12,11 @@ public partial class GameOverPage : ContentPage
 			didWin = value;
 			if(didWin)
 			{
-				ResultLabel.Text = "You Won!";
+				ResultLabel.Text = "I bet you study Hex codes in your spare time!";
 			}
 			else
 			{
-				ResultLabel.Text = "You Lost!";
+				ResultLabel.Text = "I guess this means you're a loser!";
 			}
 		}
 	}
