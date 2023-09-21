@@ -29,6 +29,8 @@
             </StackLayout>
 
             <CollectionView
+                Grid.Row="1"
+                HeightRequest="200"
                 ItemsSource="{Binding Guesses}">
                 <CollectionView.ItemTemplate>
 
