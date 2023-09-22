@@ -5,6 +5,7 @@
              Title="#facade"
              xmlns:local="clr-namespace:facade"
              x:DataType="local:MainPageViewModel"
+             BackgroundColor="#D7DBDD"
              >
 
     <ScrollView>
@@ -18,12 +19,13 @@
 
 
             <!--<RoundRectangle Grid.Row="0" Fill="#facade" CornerRadius="48" MaximumHeightRequest="150"/>-->
-            <StackLayout HorizontalOptions="Fill" BackgroundColor="#facade" Padding="8" Grid.Row="0" Orientation="Horizontal"  >
+            <StackLayout HorizontalOptions="Fill" BackgroundColor="#facade" Margin="35,25,35,0" Padding="8" Grid.Row="0" Orientation="Horizontal"  >
 
                 <Label Text="#" FontSize="60" VerticalOptions="Center" />
                 <Label Text="{Binding CurrentGuess}"
                        FontSize="60"
                        VerticalOptions="Center"
+                       HorizontalOptions="Center"
                        />
 
             </StackLayout>
@@ -40,11 +42,16 @@
                 </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="local:ColorGuess">
-                        <Button 
+                    <DataTemplate x:DataType="local:ColorGuess" >
+                        <Button
+                            Padding="10,20,10,20"
                             Text="{Binding Guess}"
                             BackgroundColor="{Binding Color}"
                             FontSize="16"
+                            CornerRadius="0"
+                            Margin="10,20,20,10"
+                            BorderColor="#D7DBDD"
+                            BorderWidth="1"
                             IsEnabled="false "/>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -127,7 +134,7 @@
                     Text="A"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#909497"
                     TextColor="White"
                     FontSize="48"
 
@@ -139,7 +146,7 @@
                     Text="B"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#909497"
                     TextColor="White"
 
                     FontSize="48"
@@ -152,7 +159,7 @@
                     Text="C"
                    WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#909497"
                     TextColor="White"
 
                     FontSize="48"
@@ -165,7 +172,7 @@
                     Text="D"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#909497"
                     TextColor="White"
 
                     FontSize="48"
@@ -178,7 +185,7 @@
                     Text="E"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#909497"
                     TextColor="White"
 
                     FontSize="48"
@@ -191,7 +198,7 @@
                     Text="F"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#666"
+                    BackgroundColor="#909497"
                     TextColor="White"
 
                     FontSize="48"
@@ -205,7 +212,7 @@
                     WidthRequest="60"
                     HeightRequest="60"
                         CornerRadius="30"
-                    BackgroundColor="#666"
+                    BackgroundColor="#909497"
                     TextColor="White"
                     Clicked="Button_Clicked"
                     FontSize="32"
@@ -222,10 +229,10 @@
                     Text="⌫"
                     WidthRequest="60"
                     HeightRequest="60"
-                    BackgroundColor="Transparent"
-                    TextColor="#333"
+                    BackgroundColor="#909497"
+                    TextColor="White"
                     BorderWidth="0"
-                    FontSize="40"
+                    FontSize="36"
                     Command="{Binding DeleteLetterCommand}"
                 />
 

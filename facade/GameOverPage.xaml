@@ -3,32 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="facade.GameOverPage"
              Title="GameOverPage">
-    <VerticalStackLayout BackgroundColor="Grey">
+    <VerticalStackLayout BackgroundColor="#C21E56">
         <Label
             x:Name="ResultLabel"
             Text="{Binding Result}"
             FontSize="50"
+            VerticalTextAlignment="Center"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            Padding="20, 100, 20, 100"
+            Padding="20, 130, 20, 130"
             FontFamily="Roboto-Regular"
-            BackgroundColor="Red"
             TextColor="white"/>
-        <Label
-            BackgroundColor="#FACADE"
-            Text="The Secret color was: #Facade"
-            Padding="10, 20, 10, 20"
-            Margin="10"
-            FontSize="30"
-            FontAttributes="Bold"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-        />
         <Button
                 Text="Try Again"
                 BackgroundColor="#111"
                 FontSize="Title"
-                IsEnabled="false "
+                IsEnabled="false"
+                Padding="0,10,0,10"
+                Margin="40"
                 TextColor="White"/>
     </VerticalStackLayout>
 </ContentPage>

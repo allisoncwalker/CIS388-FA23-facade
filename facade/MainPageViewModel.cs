@@ -33,7 +33,7 @@ namespace facade
         [RelayCommand]
         void AddLetter(string letter)
         {
-            if (CurrentGuess.Length > 0)
+            if (CurrentGuess.Length > 6)
             {
                 CurrentGuess += letter;
             }
@@ -42,7 +42,7 @@ namespace facade
         [RelayCommand]
         void DeleteLetter()
         {
-            if (CurrentGuess.Length < 6)
+            if (CurrentGuess.Length < 0)
             {
                 CurrentGuess = CurrentGuess.Remove(CurrentGuess.Length - 1, 1);
             }
