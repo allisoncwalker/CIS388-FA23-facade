@@ -2,25 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="facade.GameOverPage"
+             BackgroundColor="Red"
              Title="GameOverPage">
-    <VerticalStackLayout BackgroundColor="#C21E56">
+    <VerticalStackLayout >
         <Label
             x:Name="ResultLabel"
             Text="{Binding Result}"
-            FontSize="50"
+            FontSize="75"
             VerticalTextAlignment="Center"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             Padding="20, 130, 20, 130"
+            Margin="20,0,20,0"
             FontFamily="Roboto-Regular"
             TextColor="white"/>
-        <Button
-                Text="Try Again"
-                BackgroundColor="#111"
-                FontSize="Title"
-                IsEnabled="false"
-                Padding="0,10,0,10"
-                Margin="40"
-                TextColor="White"/>
+       
     </VerticalStackLayout>
 </ContentPage>

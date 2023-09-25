@@ -5,7 +5,7 @@
              Title="#facade"
              xmlns:local="clr-namespace:facade"
              x:DataType="local:MainPageViewModel"
-             BackgroundColor="#D7DBDD"
+             BackgroundColor="#959CB0"
              >
 
     <ScrollView>
@@ -44,13 +44,14 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="local:ColorGuess" >
                         <Button
-                            Padding="10,20,10,20"
+                            Padding="10,30,10,30"
                             Text="{Binding Guess}"
                             BackgroundColor="{Binding Color}"
                             FontSize="16"
                             CornerRadius="0"
+                            TextColor="Black"
                             Margin="10,20,20,10"
-                            BorderColor="#D7DBDD"
+                            BorderColor="#959CB0"
                             BorderWidth="1"
                             IsEnabled="false "/>
                     </DataTemplate>
@@ -134,7 +135,7 @@
                     Text="A"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#909497"
+                    BackgroundColor="#9F7C85"
                     TextColor="White"
                     FontSize="48"
 
@@ -146,7 +147,7 @@
                     Text="B"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#909497"
+                    BackgroundColor="#9F7C85"
                     TextColor="White"
 
                     FontSize="48"
@@ -159,7 +160,7 @@
                     Text="C"
                    WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#909497"
+                    BackgroundColor="#9F7C85"
                     TextColor="White"
 
                     FontSize="48"
@@ -172,7 +173,7 @@
                     Text="D"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#909497"
+                    BackgroundColor="#9F7C85"
                     TextColor="White"
 
                     FontSize="48"
@@ -185,7 +186,7 @@
                     Text="E"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#909497"
+                    BackgroundColor="#9F7C85"
                     TextColor="White"
 
                     FontSize="48"
@@ -198,7 +199,7 @@
                     Text="F"
                     WidthRequest="80"
                     HeightRequest="80"
-                    BackgroundColor="#909497"
+                    BackgroundColor="#9F7C85"
                     TextColor="White"
 
                     FontSize="48"
@@ -212,7 +213,7 @@
                     WidthRequest="60"
                     HeightRequest="60"
                         CornerRadius="30"
-                    BackgroundColor="#909497"
+                    BackgroundColor="#9F7C85"
                     TextColor="White"
                     Clicked="Button_Clicked"
                     FontSize="32"
@@ -229,7 +230,7 @@
                     Text="⌫"
                     WidthRequest="60"
                     HeightRequest="60"
-                    BackgroundColor="#909497"
+                    BackgroundColor="#9F7C85"
                     TextColor="White"
                     BorderWidth="0"
                     FontSize="36"
