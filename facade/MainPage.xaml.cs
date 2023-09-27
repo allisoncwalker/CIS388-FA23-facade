@@ -4,7 +4,7 @@ namespace facade;
 
 public partial class MainPage : ContentPage
 {
-    int count = 0;
+    //int count = 0;
 
     public bool DidWin { get; set; } = false;
 
