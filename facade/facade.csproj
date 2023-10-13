@@ -56,4 +56,10 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="global.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="global.json" />
+	</ItemGroup>
 </Project>

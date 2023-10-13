@@ -12,7 +12,7 @@ public partial class GameOverPage : ContentPage
 			didWin = value;
 			if(didWin)
 			{
-				ResultLabel.Text = "I bet you study Hex codes in your spare time!";
+				ResultLabel.Text = "You Knew a Hex Code. You Win, But Did You Really?";
 			}
 			else
 			{

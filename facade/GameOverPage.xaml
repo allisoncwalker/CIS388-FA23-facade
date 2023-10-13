@@ -2,20 +2,28 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="facade.GameOverPage"
-             BackgroundColor="Red"
+             BackgroundColor="#906060"
              Title="GameOverPage">
     <VerticalStackLayout >
         <Label
             x:Name="ResultLabel"
             Text="{Binding Result}"
-            FontSize="75"
+            FontSize="60"
             VerticalTextAlignment="Center"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            Padding="20, 130, 20, 130"
+            Padding="20, 50, 20, 50"
             Margin="20,0,20,0"
-            FontFamily="Roboto-Regular"
+            FontFamily="poppins"
             TextColor="white"/>
+        <Label
+            Text="THE HEX CODE WAS: #FACADE"
+            FontSize="40"
+            HorizontalOptions="Center"
+            FontFamily="poppins"
+            TextColor="#D9D9D9"
+            Padding="30"
+            />
        
     </VerticalStackLayout>
 </ContentPage>

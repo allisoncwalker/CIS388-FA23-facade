@@ -5,7 +5,7 @@
              Title="#facade"
              xmlns:local="clr-namespace:facade"
              x:DataType="local:MainPageViewModel"
-             BackgroundColor="#959CB0"
+             BackgroundColor="#d3c1c3"
              >
 
     <ScrollView>
@@ -51,8 +51,8 @@
                             Padding="10,30,10,30"
                             CornerRadius="0"
                             TextColor="Black"
-                            Margin="10,20,20,10"
-                            BorderColor="#959CB0"
+                            Margin="5,5,5,5"
+                            BorderColor="#f7f6fc"
                             BorderWidth="1"/>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -136,7 +136,7 @@
                     WidthRequest="80"
                     HeightRequest="80"
                     BackgroundColor="#9F7C85"
-                    TextColor="White"
+                    TextColor="black"
                     FontSize="48"
                     Command="{Binding AddLetterCommand}"
                     CommandParameter="A"
@@ -147,7 +147,7 @@
                     WidthRequest="80"
                     HeightRequest="80"
                     BackgroundColor="#9F7C85"
-                    TextColor="White"
+                    TextColor="black"
                     FontSize="48"
                     Command="{Binding AddLetterCommand}"
                     CommandParameter="B"
@@ -158,7 +158,7 @@
                    WidthRequest="80"
                     HeightRequest="80"
                     BackgroundColor="#9F7C85"
-                    TextColor="White"
+                    TextColor="Black"
                     FontSize="48"
                     Command="{Binding AddLetterCommand}"
                     CommandParameter="C"
@@ -169,7 +169,7 @@
                     WidthRequest="80"
                     HeightRequest="80"
                     BackgroundColor="#9F7C85"
-                    TextColor="White"
+                    TextColor="Black"
                     FontSize="48"
                     Command="{Binding AddLetterCommand}"
                     CommandParameter="D"
@@ -180,7 +180,7 @@
                     WidthRequest="80"
                     HeightRequest="80"
                     BackgroundColor="#9F7C85"
-                    TextColor="White"
+                    TextColor="black"
 
                     FontSize="48"
 
@@ -193,7 +193,7 @@
                     WidthRequest="80"
                     HeightRequest="80"
                     BackgroundColor="#9F7C85"
-                    TextColor="White"
+                    TextColor="black"
 
                     FontSize="48"
 
@@ -202,14 +202,14 @@
                 />
                 <Button Grid.Row="0"
                     Grid.Column="3"
-                    Text="↑"
+                    Text="⬆"
                     WidthRequest="60"
                     HeightRequest="60"
-                        CornerRadius="30"
+                    CornerRadius="30"
                     BackgroundColor="#9F7C85"
-                    TextColor="White"
-                    Clicked="Button_Clicked"
-                    FontSize="32"
+                    TextColor="black"
+                    Command= "{Binding GuessCommand}"
+                    FontSize="30"
                 >
                     <Button.Shadow>
                         <Shadow Brush="Gray"
@@ -224,9 +224,9 @@
                     WidthRequest="60"
                     HeightRequest="60"
                     BackgroundColor="#9F7C85"
-                    TextColor="White"
+                    TextColor="black"
                     BorderWidth="0"
-                    FontSize="36"
+                    FontSize="30"
                     Command="{Binding DeleteLetterCommand}"
                 />
 

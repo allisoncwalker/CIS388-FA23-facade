@@ -13,6 +13,9 @@ namespace facade
         [ObservableProperty]
         private string currentGuess;
 
+        [ObservableProperty]
+        private bool didWin;
+
         public ObservableCollection<ColorGuess> Guesses { get; set; }
 
         //public string SecretColor { get; set; }
@@ -29,38 +32,65 @@ namespace facade
 
         }
 
-
         [RelayCommand]
         void AddLetter(string letter)
         {
-            if (CurrentGuess.Length > 6)
+            if (CurrentGuess.Length < 6)
             {
                 CurrentGuess += letter;
+                //Console.WriteLine("adding letter");
             }
         }
 
         [RelayCommand]
         void DeleteLetter()
         {
-            if (CurrentGuess.Length < 0)
+            if (CurrentGuess.Length > 0)
             {
-                CurrentGuess = CurrentGuess.Remove(CurrentGuess.Length - 1, 1);
+                CurrentGuess = CurrentGuess.Remove(CurrentGuess.Length - 1);
             }
         }
 
         [RelayCommand]
-        void Guess()
+        async void Guess()
         {
-            // if correct, then go to game over (DidWin=true)
-
-            // else if this is the 6th guess (and it's wrong)
-            // then go to game over (DidWin=false)
-
-
-            // Add this guess to the Guesses
-            Guesses.Add(new ColorGuess(CurrentGuess));
+            if (CurrentGuess.Length == 6) // only if there's enough letters in the guess
+            {
+                if (CurrentGuess == SecretColor)
+                {
+                    // go to game over page,
+                    DidWin = true;
+                    await Shell.Current.GoToAsync($"{nameof(GameOverPage)}?DidWin={true}");
+                    ClearData();
+                }
+                else if (Guesses.Count == 5)
+                {
+                    // go to game over page, DidWin = false
+                    await Shell.Current.GoToAsync($"{nameof(GameOverPage)}?DidWin={false}");
+                    ClearData();
+                }
+                else
+                {
+                    // add CurrentGuess to Guesses
+                    Guesses.Add(new ColorGuess(CurrentGuess.ToLower()));
+                    CurrentGuess = "";
+                }
+            }
 
         }
+
+        [RelayCommand]
+        void Clear()
+        {
+            CurrentGuess = "";
+        }
+
+        void ClearData()
+        {
+            CurrentGuess = "";
+            Guesses.Clear();
+        }
+
 
 
     }
