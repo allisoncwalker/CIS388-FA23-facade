@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="facade.GameOverPage"
-             BackgroundColor="#a31621"
+             BackgroundColor="#facade"
              Title="GameOverPage">
     <VerticalStackLayout >
         <Label
@@ -15,13 +15,13 @@
             Padding="20, 50, 20, 50"
             Margin="20,0,20,0"
             FontFamily="poppins"
-            TextColor="white"/>
+            TextColor="Black"/>
         <Label
             Text="THE HEX CODE WAS: #FACADE"
             FontSize="40"
             HorizontalOptions="Center"
             FontFamily="poppins"
-            TextColor="#D9D9D9"
+            TextColor="#9F7C85"
             Padding="30"
             />
        
